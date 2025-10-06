@@ -1,0 +1,91 @@
+name: m_ishaq_butt
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  responsive_builder: ^0.7.1
+  font_awesome_flutter: ^10.10.0 
+  url_launcher: ^6.0.9
+  flutter_feather_icons: ^2.0.0+1 
+  animated_text_kit: ^4.2.1
+  visibility_detector: ^0.4.0+2
+  flutter_bloc: ^9.1.1
+  layout: ^1.0.5
+  freezed_annotation: ^3.1.0
+  dartz: ^0.10.1
+  get_it: ^8.2.0
+  flutter_spinkit: ^5.2.2
+  http: ^1.2.2
+  dio: ^5.9.0
+  connectivity_plus: ^7.0.0
+  package_info_plus: ^9.0.0
+  flutter_secure_storage: ^9.2.4
+  equatable: ^2.0.7
+  flutter_svg: ^2.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  build_runner: ^2.8.0
+  freezed: ^3.2.3
+  flutter_gen_runner: ^5.11.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+    - assets/images/certificates/
+    - assets/images/projects/
+    - assets/images/projects/aerium-v1/
+    - assets/images/projects/aerium-v2/
+    - assets/images/projects/disneyplus/
+    - assets/images/projects/drop/
+    - assets/images/projects/flutter_catalog/
+    - assets/images/projects/foodybite/
+    - assets/images/projects/login_catalog/
+    - assets/images/projects/nimbus/
+    - assets/images/projects/otp_package/
+    - assets/images/projects/roam/
+    - assets/images/projects/outfitr/
+  
+  fonts:
+    - family: VisueltPro
+      fonts:
+        - asset: assets/fonts/visuelt/VisueltPro-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/visuelt/VisueltPro-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/visuelt/VisueltPro-Light.ttf
+          weight: 300
+        - asset: assets/fonts/visuelt/VisueltPro-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/visuelt/VisueltPro-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/visuelt/VisueltPro-Black.ttf
+          weight: 700
+        - asset: assets/fonts/visuelt/VisueltPro-Bold.ttf
+          weight: 800
+
+flutter_gen:
+  output: lib/generated/assets
+  integrations:
+    flutter_svg: true
+  colors:
+    enabled: true
+    inputs:
+      - assets/colors/colors.xml

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors -->
+    <color name="primaryColor">#F9F9F9</color>
+    <color name="secondaryColor">#363636</color>
+    <color name="accentColor">#FFFFFF</color>
+    <color name="accentColor2">#EEEEEE</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black100">#303030</color>
+    <color name="textSelectionColor">#1C00FF</color>
+
+    <color name="grey">#E1E1E1</color>
+    <color name="grey100">#E8E8E8</color>
+    <color name="grey300">#B6B7B9</color>
+    <color name="grey500">#868585</color>
+    <color name="grey550">#8F8E8E</color>
+    <color name="grey600">#757575</color>
+    <color name="grey700">#515151</color>
+    <color name="grey750">#474747</color>
+    <color name="grey800">#3D3D3D</color>
+
+    <color name="lightGreen">#E4FFE1</color>
+    <color name="errorRed">#FF2019</color>
+    <color name="disneyPlus">#B41100</color>
+
+    <color name="nimbus">#F6C350</color>
+    <color name="nimbusNavTitle">#000000</color>
+    <color name="nimbusSelectedNavTitle">#F6C350</color>
+
+    <color name="foodybite">#6B79F6</color>
+    <color name="foodybiteNavTitle">#B2B9CF</color>
+    <color name="foodybiteSelectedNavTitle">#212455</color>
+    <color name="foodybiteAppLogo">#808BF6</color>
+
+    <color name="flutter_catalog">#5A458D</color>
+    <color name="flutterCatalogSelectedNavTitle">#7D54A9</color>
+    <color name="flutterCatalogAppLogo">#7D54A9</color>
+
+    <color name="login_catalog">#C95089</color>
+    <color name="loginCatalogNavTitle">#2F3446</color>
+    <color name="loginCatalogSelectedNavTitle">#C95089</color>
+    <color name="loginCatalogAppLogo">#C95089</color>
+
+    <color name="roam">#2762CB</color>
+    <color name="roamNavTitle">#6F8D8C</color>
+    <color name="roamSelectedNavTitle">#2E524B</color>
+    <color name="roamAppLogo">#2762CB</color>
+
+    <color name="drop">#6A53A1</color>
+    <color name="dropNavTitle">#2A5A4A</color>
+    <color name="dropSelectedNavTitle">#DC7F4A</color>
+    <color name="dropAppLogo">#F5B843</color>
+
+    <color name="aerium_v1">#0E1319</color>
+    <color name="aeriumV1NavTitle">#162726</color>
+
+    <color name="aerium_v2">#F9F9F9</color>
+    <color name="aeriumV2NavTitle">#F6C350</color>
+    <color name="aeriumV2SelectedNavTitle">#F6C350</color>
+
+    <color name="otp_package">#6A53A1</color>
+    <color name="otpPackageNavTitle">#000000</color>
+    <color name="otpPackageSelectedNavTitle">#6A53A1</color>
+    <color name="otpPackageAppLogo">#8E7AEF</color>
+
+    <color name="outfitr">#2DB8AF</color>
+    <color name="outfitrNavTitle">#0A0E32</color>
+    <color name="outfitrSelectedNavTitle">#377F8C</color>
+    <color name="outfitrAppLogo">#2DB8AF</color>
+
+
+</resources>
