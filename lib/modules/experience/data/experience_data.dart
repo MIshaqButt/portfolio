@@ -1,4 +1,4 @@
-import 'package:m_ishaq_butt/modules/experience/model/experience_model.dart';
+import 'package:mishaqbutt/modules/experience/model/experience_model.dart';
 
 class ExperienceData {
   static List<ExperienceModel> experienceData = [

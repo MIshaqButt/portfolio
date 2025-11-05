@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:m_ishaq_butt/core/constants/messages.dart';
-import 'package:m_ishaq_butt/core/dependency_injection/injection_container.dart';
-import 'package:m_ishaq_butt/core/networking/method_type.dart';
-import 'package:m_ishaq_butt/core/networking/models/api_result.dart';
-import 'package:m_ishaq_butt/core/networking/request_config.dart';
-import 'package:m_ishaq_butt/core/utils/logger.dart';
+import 'package:mishaqbutt/core/constants/messages.dart';
+import 'package:mishaqbutt/core/dependency_injection/injection_container.dart';
+import 'package:mishaqbutt/core/networking/method_type.dart';
+import 'package:mishaqbutt/core/networking/models/api_result.dart';
+import 'package:mishaqbutt/core/networking/request_config.dart';
+import 'package:mishaqbutt/core/utils/logger.dart';
 
 base class AERepository with Logger {
   const AERepository();
@@ -204,12 +204,12 @@ base class AERepository with Logger {
 
   String _getDefaultDioErrorCode(DioException exception) {
     return switch (exception.type) {
-      DioExceptionType.connectionTimeout => 'CONNECTION_TIMEOUT',
+      DioExceptionType.connectionTimeout => 'connectION_TIMEOUT',
       DioExceptionType.receiveTimeout => 'RECEIVE_TIMEOUT',
       DioExceptionType.sendTimeout => 'SEND_TIMEOUT',
       DioExceptionType.badResponse => 'BAD_RESPONSE',
       DioExceptionType.badCertificate => 'BAD_CERTIFICATE',
-      DioExceptionType.connectionError => 'CONNECTION_ERROR',
+      DioExceptionType.connectionError => 'connectION_ERROR',
       _ => 'UNKNOWN_DIO_ERROR',
     };
   }

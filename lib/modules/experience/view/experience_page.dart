@@ -1,23 +1,23 @@
-import 'package:m_ishaq_butt/core/design_system/values/sizes.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/modules/experience/data/experience_data.dart';
-import 'package:m_ishaq_butt/modules/experience/model/experience_model.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/animated_footer.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/page_header.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_positioned_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_text_slide_box_transition.dart';
-import 'package:m_ishaq_butt/presentation/widgets/content_area.dart';
-import 'package:m_ishaq_butt/presentation/widgets/content_builder.dart';
-import 'package:m_ishaq_butt/presentation/widgets/custom_spacer.dart';
-import 'package:m_ishaq_butt/presentation/widgets/page_wrapper.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/sizes.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/experience/data/experience_data.dart';
+import 'package:mishaqbutt/modules/experience/model/experience_model.dart';
+import 'package:mishaqbutt/modules/widgets/animated_footer.dart';
+import 'package:mishaqbutt/modules/widgets/page_header.dart';
+import 'package:mishaqbutt/modules/widgets/animated_positioned_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_text_slide_box_transition.dart';
+import 'package:mishaqbutt/modules/widgets/content_area.dart';
+import 'package:mishaqbutt/modules/widgets/content_builder.dart';
+import 'package:mishaqbutt/modules/widgets/custom_spacer.dart';
+import 'package:mishaqbutt/modules/widgets/page_wrapper.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class ExperiencePage extends StatefulWidget {
-  static const String experiencePageRoute = StringConst.EXPERIENCE_PAGE;
+  static const String experiencePageRoute = StringConst.experiencePage;
   const ExperiencePage({super.key});
 
   @override
@@ -109,7 +109,7 @@ class ExperiencePageState extends State<ExperiencePage>
 
     return PageWrapper(
       selectedRoute: ExperiencePage.experiencePageRoute,
-      selectedPageName: StringConst.EXPERIENCE,
+      selectedPageName: StringConst.experience,
       navBarAnimationController: _controller,
       onLoadingAnimationDone: () {
         _controller.forward();
@@ -121,7 +121,7 @@ class ExperiencePageState extends State<ExperiencePage>
         ),
         children: [
           PageHeader(
-            headingText: StringConst.EXPERIENCE,
+            headingText: StringConst.experience,
             headingTextController: _controller,
           ),
           Padding(
@@ -152,8 +152,8 @@ class ExperiencePageState extends State<ExperiencePage>
       color: ColorName.black,
       fontSize: responsiveSize(
         context,
-        Sizes.TEXT_SIZE_18,
-        Sizes.TEXT_SIZE_20,
+        Sizes.textSize18,
+        Sizes.textSize20,
       ),
     );
 
@@ -189,8 +189,8 @@ class ExperiencePageState extends State<ExperiencePage>
                   textStyle: defaultTitleStyle?.copyWith(
                     fontSize: responsiveSize(
                       context,
-                      Sizes.TEXT_SIZE_16,
-                      Sizes.TEXT_SIZE_18,
+                      Sizes.textSize16,
+                      Sizes.textSize18,
                     ),
                     fontWeight: FontWeight.w300,
                   ),
@@ -225,7 +225,7 @@ class ExperiencePageState extends State<ExperiencePage>
     final TextStyle? bodyLargeStyle = textTheme.bodyLarge?.copyWith(
       fontSize: responsiveSize(
         context,
-        Sizes.TEXT_SIZE_16,
+        Sizes.textSize16,
         17,
       ),
       color: ColorName.grey750,

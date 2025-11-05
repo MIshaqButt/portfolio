@@ -3,7 +3,7 @@ import 'dart:developer' as dev;
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:m_ishaq_butt/core/utils/logger.dart';
+import 'package:mishaqbutt/core/utils/logger.dart';
 
 class LoggingInterceptor extends Interceptor with Logger {
   const LoggingInterceptor();

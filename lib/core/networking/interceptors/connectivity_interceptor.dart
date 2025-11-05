@@ -1,6 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
-import 'package:m_ishaq_butt/core/constants/messages.dart';
+import 'package:mishaqbutt/core/constants/messages.dart';
 
 class ConnectivityInterceptor extends Interceptor {
   const ConnectivityInterceptor();

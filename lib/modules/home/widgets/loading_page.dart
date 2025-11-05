@@ -1,16 +1,16 @@
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/core/utils/functions.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/presentation/widgets/empty.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/core/utils/functions.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/widgets/empty.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 
 const double lineHeight = 2;
 Color defaultLineColor = ColorName.accentColor2.withValues(alpha: 0.35);
 
 class LoadingHomePageAnimation extends StatefulWidget {
-  static const String loadingPageRoute = StringConst.LOADING_PAGE;
+  static const String loadingPageRoute = StringConst.loadingPage;
 
   const LoadingHomePageAnimation({
     super.key,

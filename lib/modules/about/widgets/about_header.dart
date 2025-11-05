@@ -1,9 +1,9 @@
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/generated/assets/assets.gen.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_text_slide_box_transition.dart';
-import 'package:m_ishaq_butt/presentation/widgets/content_area.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/generated/assets/assets.gen.dart';
+import 'package:mishaqbutt/modules/widgets/animated_text_slide_box_transition.dart';
+import 'package:mishaqbutt/modules/widgets/content_area.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -111,7 +111,7 @@ class AboutDescription extends StatelessWidget {
       children: [
         AnimatedTextSlideBoxTransition(
           controller: controller,
-          text: StringConst.ABOUT_DEV_CATCH_LINE_1,
+          text: StringConst.aboutDevCatchLine1,
           width: width,
           maxLines: 2,
           textStyle: style,
@@ -119,7 +119,7 @@ class AboutDescription extends StatelessWidget {
         SpaceH8(),
         AnimatedTextSlideBoxTransition(
           controller: controller,
-          text: StringConst.ABOUT_DEV_CATCH_LINE_2,
+          text: StringConst.aboutDevCatchLine2,
           width: width,
           maxLines: 10,
           heightFactor: 2,
@@ -128,7 +128,7 @@ class AboutDescription extends StatelessWidget {
         SpaceH8(),
         AnimatedTextSlideBoxTransition(
           controller: controller,
-          text: StringConst.ABOUT_DEV_CATCH_LINE_4,
+          text: StringConst.aboutDevCatchLine4,
           width: width,
           maxLines: 10,
           textStyle: style,
@@ -136,7 +136,7 @@ class AboutDescription extends StatelessWidget {
         SpaceH8(),
         AnimatedTextSlideBoxTransition(
           controller: controller,
-          text: StringConst.ABOUT_DEV_CATCH_LINE_5,
+          text: StringConst.aboutDevCatchLine5,
           width: width,
           maxLines: 10,
           textStyle: style,

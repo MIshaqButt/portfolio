@@ -1,6 +1,6 @@
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/generated/assets/assets.gen.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/generated/assets/assets.gen.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 
 class ScrollDownButton extends StatelessWidget {
@@ -13,7 +13,7 @@ class ScrollDownButton extends StatelessWidget {
         RotatedBox(
           quarterTurns: 1,
           child: Text(
-            StringConst.SCROLL_DOWN.toUpperCase(),
+            StringConst.scrollDown.toUpperCase(),
             style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontSize: 12,
                   letterSpacing: 1.7,

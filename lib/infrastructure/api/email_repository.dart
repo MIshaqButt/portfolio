@@ -1,4 +1,4 @@
-import 'package:m_ishaq_butt/infrastructure/failures/email_failure.dart';
+import 'package:mishaqbutt/infrastructure/failures/email_failure.dart';
 import 'package:dartz/dartz.dart';
 
 import 'email_api.dart';
@@ -34,10 +34,8 @@ class EmailRepositoryImpl implements EmailRepository {
         subject: subject,
         message: message,
       );
-      print(emailStatus);
       return Right(emailStatus);
     } catch (e) {
-      print(e.toString());
       if (e == EmailFailure.serverError()) {
         return Left(EmailFailure.serverError());
       } else {

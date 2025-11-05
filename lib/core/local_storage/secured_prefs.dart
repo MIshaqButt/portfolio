@@ -16,8 +16,7 @@ final class SecuredPrefs {
 
   Future<void> clear() async => await _instance.deleteAll();
 
-  // TODO fill out this metho later on...
   Future<String?> readToken() async {
-    return null;
+    return await _instance.read(key: 'auth_token');
   }
 }

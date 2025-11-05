@@ -1,10 +1,10 @@
-import 'package:m_ishaq_butt/core/design_system/values/data.dart';
-import 'package:m_ishaq_butt/core/design_system/values/sizes.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_positioned_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_text_slide_box_transition.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/data.dart';
+import 'package:mishaqbutt/core/design_system/values/sizes.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/widgets/animated_positioned_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_text_slide_box_transition.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -25,7 +25,7 @@ class TechnologySection extends StatelessWidget {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? titleStyle = textTheme.titleLarge?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_16,
+      fontSize: Sizes.textSize16,
       color: ColorName.black,
     );
     return SizedBox(
@@ -41,7 +41,7 @@ class TechnologySection extends StatelessWidget {
                 AnimatedTextSlideBoxTransition(
                   controller: controller,
                   width: screenWidth,
-                  text: StringConst.MOBILE_TECH,
+                  text: StringConst.mobileTech,
                   textStyle: titleStyle,
                 ),
                 SpaceH20(),
@@ -59,7 +59,7 @@ class TechnologySection extends StatelessWidget {
                 AnimatedTextSlideBoxTransition(
                   controller: controller,
                   width: screenWidth,
-                  text: StringConst.OTHER_TECH,
+                  text: StringConst.otherTech,
                   textStyle: titleStyle,
                 ),
                 SpaceH20(),
@@ -88,7 +88,7 @@ class TechnologySection extends StatelessWidget {
                       AnimatedTextSlideBoxTransition(
                         controller: controller,
                         width: width * 0.25,
-                        text: StringConst.MOBILE_TECH,
+                        text: StringConst.mobileTech,
                         textStyle: titleStyle,
                       ),
                       SpaceH20(),
@@ -114,7 +114,7 @@ class TechnologySection extends StatelessWidget {
                         AnimatedTextSlideBoxTransition(
                           controller: controller,
                           width: (width * 0.75),
-                          text: StringConst.OTHER_TECH,
+                          text: StringConst.otherTech,
                           textStyle: titleStyle,
                         ),
                         SpaceH20(),
@@ -148,7 +148,7 @@ class TechnologySection extends StatelessWidget {
   }) {
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? bodyLargeStyle = textTheme.bodyLarge?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_15,
+      fontSize: Sizes.textSize15,
       color: ColorName.grey750,
       fontWeight: FontWeight.w400,
     );

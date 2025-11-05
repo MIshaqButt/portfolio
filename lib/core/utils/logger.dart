@@ -85,13 +85,15 @@ mixin Logger {
   ) {
     if (kReleaseMode) {
       try {
-        // TODO Uncomment it once added
-        // FirebaseCrashlytics.instance.recordError(
-        //   error,
-        //   stackTrace,
-        //   reason: 'Error in $context',
-        //   fatal: false,
-        // );
+        // Forward through Flutter's error pipeline; integrate Crashlytics later if added.
+        FlutterError.reportError(
+          FlutterErrorDetails(
+            exception: error,
+            stack: stackTrace,
+            library: 'logger',
+            context: ErrorDescription('Error in $context'),
+          ),
+        );
       } catch (crashlyticsError) {
         // If Crashlytics fails, just log it locally to avoid infinite loops
         dev.log(

@@ -1,14 +1,15 @@
-import 'package:m_ishaq_butt/core/design_system/values/data.dart';
-import 'package:m_ishaq_butt/core/design_system/values/sizes.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/core/utils/functions.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_line_through_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_positioned_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_text_slide_box_transition.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/sizes.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/core/utils/functions.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/widgets/animated_line_through_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_positioned_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_text_slide_box_transition.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
+import 'package:mishaqbutt/modules/works/data/note_worthy_project_data.dart';
+import 'package:mishaqbutt/modules/works/model/note_worthy_project_model.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class NoteWorthyProjects extends StatefulWidget {
@@ -42,18 +43,10 @@ class NoteWorthyProjectsState extends State<NoteWorthyProjects>
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? titleStyle = textTheme.titleLarge?.copyWith(
       color: ColorName.black,
-      fontSize: responsiveSize(
-        context,
-        Sizes.TEXT_SIZE_20,
-        Sizes.TEXT_SIZE_30,
-      ),
+      fontSize: responsiveSize(context, Sizes.textSize20, Sizes.textSize30),
     );
     TextStyle? bodyLargeStyle = textTheme.bodyLarge?.copyWith(
-      fontSize: responsiveSize(
-        context,
-        Sizes.TEXT_SIZE_16,
-        Sizes.TEXT_SIZE_18,
-      ),
+      fontSize: responsiveSize(context, Sizes.textSize16, Sizes.textSize18),
       color: ColorName.grey750,
       fontWeight: FontWeight.w400,
       height: 2.0,
@@ -74,7 +67,7 @@ class NoteWorthyProjectsState extends State<NoteWorthyProjects>
           AnimatedTextSlideBoxTransition(
             heightFactor: 1.5,
             controller: _controller,
-            text: StringConst.NOTE_WORTHY_PROJECTS,
+            text: StringConst.noteWorthyProjects,
             textStyle: titleStyle,
           ),
           SpaceH16(),
@@ -83,17 +76,17 @@ class NoteWorthyProjectsState extends State<NoteWorthyProjects>
               parent: _controller,
               curve: Interval(0.6, 1.0, curve: Curves.fastOutSlowIn),
             ),
-            text: StringConst.NOTE_WORTHY_PROJECTS_DESC,
+            text: StringConst.noteWorthyProjectsDesc,
             textStyle: bodyLargeStyle,
           ),
           SpaceH40(),
-          ..._buildNoteworthyProjects(Data.noteworthyProjects),
+          ..._buildNoteworthyProjects(NoteWorthyProjectData.noteworthyProjects),
         ],
       ),
     );
   }
 
-  List<Widget> _buildNoteworthyProjects(List<NoteWorthyProjectDetails> data) {
+  List<Widget> _buildNoteworthyProjects(List<NoteWorthyProjectModel> data) {
     List<Widget> items = [];
 
     for (int index = 0; index < data.length; index++) {
@@ -109,15 +102,17 @@ class NoteWorthyProjectsState extends State<NoteWorthyProjects>
               : null,
           onProjectNameTap: data[index].isLive
               ? () {
-                  data[index].isWeb
-                      ? Functions.launchUrl(data[index].webUrl!)
-                      : Functions.launchUrl(data[index].playStoreUrl!);
+                  data[index].isOnAppStore
+                      ? Functions.launchUrl(data[index].appStoreUrl!)
+                      : data[index].isOnPlayStore
+                      ? Functions.launchUrl(data[index].playStoreUrl!)
+                      : Functions.launchUrl(data[index].webUrl!);
                 }
               : (data[index].isPublic
-                  ? () {
-                      Functions.launchUrl(data[index].gitHubUrl!);
-                    }
-                  : null),
+                    ? () {
+                        Functions.launchUrl(data[index].gitHubUrl!);
+                      }
+                    : null),
         ),
       );
       items.add(SpaceH40());
@@ -155,12 +150,12 @@ class NoteWorthyProjectItem extends StatelessWidget {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? defaultNumberStyle = textTheme.titleLarge?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_16,
+      fontSize: Sizes.textSize16,
       color: ColorName.grey550,
       fontWeight: FontWeight.w400,
     );
     TextStyle? defaultSourceStyle = textTheme.titleLarge?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_16,
+      fontSize: Sizes.textSize16,
       color: ColorName.grey700,
       fontWeight: FontWeight.w400,
       decoration: TextDecoration.underline,
@@ -168,9 +163,9 @@ class NoteWorthyProjectItem extends StatelessWidget {
     TextStyle? defaultProjectNameStyle = textTheme.titleLarge?.copyWith(
       fontSize: responsiveSize(
         context,
-        Sizes.TEXT_SIZE_16,
-        Sizes.TEXT_SIZE_20,
-        sm: Sizes.TEXT_SIZE_18,
+        Sizes.textSize16,
+        Sizes.textSize20,
+        sm: Sizes.textSize18,
       ),
       color: ColorName.black,
       fontWeight: FontWeight.w500,

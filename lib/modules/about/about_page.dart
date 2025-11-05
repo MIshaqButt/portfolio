@@ -1,27 +1,28 @@
-import 'package:m_ishaq_butt/core/design_system/values/data.dart';
-import 'package:m_ishaq_butt/core/design_system/values/sizes.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/core/utils/functions.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/modules/about/widgets/about_header.dart';
-import 'package:m_ishaq_butt/modules/about/widgets/technology_section.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/animated_footer.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/socials.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_line_through_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_positioned_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_text_slide_box_transition.dart';
-import 'package:m_ishaq_butt/presentation/widgets/content_area.dart';
-import 'package:m_ishaq_butt/presentation/widgets/content_builder.dart';
-import 'package:m_ishaq_butt/presentation/widgets/custom_spacer.dart';
-import 'package:m_ishaq_butt/presentation/widgets/page_wrapper.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/data.dart';
+import 'package:mishaqbutt/core/design_system/values/sizes.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/core/utils/functions.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/about/data/about_data.dart';
+import 'package:mishaqbutt/modules/about/widgets/about_header.dart';
+import 'package:mishaqbutt/modules/about/widgets/technology_section.dart';
+import 'package:mishaqbutt/modules/widgets/animated_footer.dart';
+import 'package:mishaqbutt/modules/widgets/socials.dart';
+import 'package:mishaqbutt/modules/widgets/animated_line_through_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_positioned_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_text_slide_box_transition.dart';
+import 'package:mishaqbutt/modules/widgets/content_area.dart';
+import 'package:mishaqbutt/modules/widgets/content_builder.dart';
+import 'package:mishaqbutt/modules/widgets/custom_spacer.dart';
+import 'package:mishaqbutt/modules/widgets/page_wrapper.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 
 class AboutPage extends StatefulWidget {
-  static const String aboutPageRoute = StringConst.ABOUT_PAGE;
+  static const String aboutPageRoute = StringConst.aboutPage;
   const AboutPage({super.key});
 
   @override
@@ -107,7 +108,7 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
 
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? bodyLargeStyle = textTheme.bodyLarge?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_18,
+      fontSize: Sizes.textSize18,
       color: ColorName.grey750,
       fontWeight: FontWeight.w400,
       height: 2.0,
@@ -119,8 +120,8 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
       color: ColorName.black,
       fontSize: responsiveSize(
         context,
-        Sizes.TEXT_SIZE_16,
-        Sizes.TEXT_SIZE_20,
+        Sizes.textSize16,
+        Sizes.textSize20,
       ),
     );
     CurvedAnimation storySectionAnimation = CurvedAnimation(
@@ -138,7 +139,7 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
     );
     return PageWrapper(
       selectedRoute: AboutPage.aboutPageRoute,
-      selectedPageName: StringConst.ABOUT,
+      selectedPageName: StringConst.about,
       navBarAnimationController: _controller,
       onLoadingAnimationDone: () {
         _controller.forward();
@@ -174,8 +175,8 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       controller: _storyController,
                       number: "/01 ",
                       width: contentAreaWidth,
-                      section: StringConst.ABOUT_DEV_STORY.toUpperCase(),
-                      title: StringConst.ABOUT_DEV_STORY_TITLE,
+                      section: StringConst.aboutDevStore.toUpperCase(),
+                      title: StringConst.aboutDevStoreTitle,
                       body: Column(
                         children: [
                           AnimatedPositionedText(
@@ -183,21 +184,21 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                             width: widthOfBody,
                             maxLines: 30,
                             // factor: 1.25,
-                            text: StringConst.ABOUT_DEV_STORY_CONTENT_1,
+                            text: AboutData.about1,
                             textStyle: bodyLargeStyle,
                           ),
                           AnimatedPositionedText(
                             controller: storySectionAnimation,
                             width: widthOfBody,
                             maxLines: 30,
-                            text: StringConst.ABOUT_DEV_STORY_CONTENT_2,
+                            text: AboutData.about2,
                             textStyle: bodyLargeStyle,
                           ),
                           AnimatedPositionedText(
                             controller: storySectionAnimation,
                             width: widthOfBody,
                             maxLines: 30,
-                            text: StringConst.ABOUT_DEV_STORY_CONTENT_3,
+                            text: AboutData.about3,
                             textStyle: bodyLargeStyle,
                           ),
                         ],
@@ -218,15 +219,15 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       controller: _technologyController,
                       number: "/02 ",
                       width: contentAreaWidth,
-                      section: StringConst.ABOUT_DEV_TECHNOLOGY.toUpperCase(),
-                      title: StringConst.ABOUT_DEV_TECHNOLOGY_TITLE,
+                      section: StringConst.aboutDevTechnology.toUpperCase(),
+                      title: StringConst.aboutDevTechnologyTitle,
                       body: Column(
                         children: [
                           AnimatedPositionedText(
                             controller: technologySectionAnimation,
                             width: widthOfBody,
                             maxLines: 12,
-                            text: StringConst.ABOUT_DEV_TECHNOLOGY_CONTENT,
+                            text: StringConst.aboutDevTechnologyContent,
                             textStyle: bodyLargeStyle,
                           ),
                         ],
@@ -266,8 +267,8 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       controller: _contactController,
                       number: "/03 ",
                       width: contentAreaWidth,
-                      section: StringConst.ABOUT_DEV_CONTACT.toUpperCase(),
-                      title: StringConst.ABOUT_DEV_CONTACT_SOCIAL,
+                      section: StringConst.aboutDevContact.toUpperCase(),
+                      title: StringConst.aboutDevContactSocial,
                       body: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -285,16 +286,16 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                           SpaceH40(),
                           AnimatedTextSlideBoxTransition(
                             controller: _contactController,
-                            text: StringConst.ABOUT_DEV_CONTACT_EMAIL,
+                            text: StringConst.aboutDevContactEmail,
                             textStyle: titleStyle,
                           ),
                           SpaceH40(),
                           AnimatedLineThroughText(
-                            text: StringConst.DEV_EMAIL,
+                            text: StringConst.devEmail,
                             hasSlideBoxAnimation: true,
                             controller: _contactController,
                             onTap: () {
-                              Functions.launchUrl(StringConst.EMAIL_URL);
+                              Functions.launchUrl(StringConst.emailURL);
                             },
                             textStyle: bodyMediumStyle,
                           ),
@@ -316,16 +317,16 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                       children: [
                         AnimatedTextSlideBoxTransition(
                           controller: _quoteController,
-                          text: StringConst.FAMOUS_QUOTE,
+                          text: StringConst.famousQuote,
                           maxLines: 5,
                           width: contentAreaWidth,
                           textAlign: TextAlign.center,
                           textStyle: titleStyle?.copyWith(
                             fontSize: responsiveSize(
                               context,
-                              Sizes.TEXT_SIZE_24,
-                              Sizes.TEXT_SIZE_36,
-                              md: Sizes.TEXT_SIZE_28,
+                              Sizes.textSize24,
+                              Sizes.textSize36,
+                              md: Sizes.textSize28,
                             ),
                             height: 2.0,
                           ),
@@ -335,13 +336,13 @@ class AboutPageState extends State<AboutPage> with TickerProviderStateMixin {
                           alignment: Alignment.centerRight,
                           child: AnimatedTextSlideBoxTransition(
                             controller: _quoteController,
-                            text: "— ${StringConst.FAMOUS_QUOTE_AUTHOR}",
+                            text: "— ${StringConst.famousQuoteAuthor}",
                             textStyle: textTheme.bodyLarge?.copyWith(
                               fontSize: responsiveSize(
                                 context,
-                                Sizes.TEXT_SIZE_16,
-                                Sizes.TEXT_SIZE_18,
-                                md: Sizes.TEXT_SIZE_16,
+                                Sizes.textSize16,
+                                Sizes.textSize18,
+                                md: Sizes.textSize16,
                               ),
                               fontWeight: FontWeight.w400,
                               color: ColorName.grey600,

@@ -1,20 +1,20 @@
-import 'package:m_ishaq_butt/core/design_system/values/data.dart';
-import 'package:m_ishaq_butt/core/design_system/values/sizes.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/core/utils/functions.dart';
-import 'package:m_ishaq_butt/generated/assets/assets.gen.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/modules/home/widgets/scroll_down.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/socials.dart';
-import 'package:m_ishaq_butt/modules/works/works_page.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_bubble_button.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_line_through_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_positioned_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_positioned_widget.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_slide_transtion.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_text_slide_box_transition.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/data.dart';
+import 'package:mishaqbutt/core/design_system/values/sizes.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/core/utils/functions.dart';
+import 'package:mishaqbutt/generated/assets/assets.gen.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/home/widgets/scroll_down.dart';
+import 'package:mishaqbutt/modules/widgets/socials.dart';
+import 'package:mishaqbutt/modules/works/works_page.dart';
+import 'package:mishaqbutt/modules/widgets/animated_bubble_button.dart';
+import 'package:mishaqbutt/modules/widgets/animated_line_through_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_positioned_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_positioned_widget.dart';
+import 'package:mishaqbutt/modules/widgets/animated_slide_transtion.dart';
+import 'package:mishaqbutt/modules/widgets/animated_text_slide_box_transition.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -317,7 +317,7 @@ class AboutDevState extends State<AboutDev> {
           margin: margin,
           child: AnimatedTextSlideBoxTransition(
             controller: widget.controller,
-            text: StringConst.HI,
+            text: StringConst.hi,
             width: widget.width,
             maxLines: 3,
             textStyle: textTheme.displayMedium?.copyWith(
@@ -372,8 +372,8 @@ class AboutDevState extends State<AboutDev> {
             textStyle: textTheme.bodyLarge?.copyWith(
               fontSize: responsiveSize(
                 context,
-                Sizes.TEXT_SIZE_16,
-                Sizes.TEXT_SIZE_18,
+                Sizes.textSize16,
+                Sizes.textSize18,
               ),
               height: 2,
               fontWeight: FontWeight.w400,
@@ -394,14 +394,14 @@ class AboutDevState extends State<AboutDev> {
             startBorderRadius: const BorderRadius.all(
               Radius.circular(100.0),
             ),
-            title: StringConst.SEE_MY_WORKS.toUpperCase(),
+            title: StringConst.seeMyWorks.toUpperCase(),
             titleStyle: textTheme.bodyLarge?.copyWith(
               color: ColorName.black,
               fontSize: responsiveSize(
                 context,
-                Sizes.TEXT_SIZE_14,
-                Sizes.TEXT_SIZE_16,
-                sm: Sizes.TEXT_SIZE_15,
+                Sizes.textSize14,
+                Sizes.textSize16,
+                sm: Sizes.textSize15,
               ),
               fontWeight: FontWeight.w500,
             ),

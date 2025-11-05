@@ -1,7 +1,7 @@
 
 import 'package:dio/dio.dart';
-import 'package:m_ishaq_butt/core/dependency_injection/injection_container.dart';
-import 'package:m_ishaq_butt/core/utils/logger.dart';
+import 'package:mishaqbutt/core/dependency_injection/injection_container.dart';
+import 'package:mishaqbutt/core/utils/logger.dart';
 
 class TokenInterceptor extends Interceptor with Logger {
   const TokenInterceptor();

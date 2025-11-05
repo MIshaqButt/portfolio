@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:layout/layout.dart';
-import 'package:m_ishaq_butt/core/design_system/theme/mib_theme.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/modules/home/home_page.dart';
-import 'package:m_ishaq_butt/presentation/routes/routes.dart';
+import 'package:mishaqbutt/core/design_system/theme/mib_theme.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/home/home_page.dart';
+import 'package:mishaqbutt/core/routes/routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

@@ -1,7 +1,5 @@
 import 'dart:convert';
-
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/infrastructure/failures/email_failure.dart';
+import 'package:mishaqbutt/infrastructure/failures/email_failure.dart';
 import 'package:http/http.dart' as http;
 
 import 'email_model.dart';
@@ -30,7 +28,8 @@ class EmailApiImpl implements EmailApi {
   }) async {
     try {
       final response = await client.post(
-        Uri.parse(StringConst.BASE_URL + StringConst.GET_IN_TOUCH_POINT),
+        
+        Uri.parse('StringConst.BASE_URL + StringConst.getInTouch_POINT'), 
        
         body: jsonEncode({
           "name": name,
@@ -47,7 +46,6 @@ class EmailApiImpl implements EmailApi {
         throw EmailFailure.serverError();
       }
     } catch (e) {
-      print("Errorss  ${e.toString()}");
       throw EmailFailure.serverError();
     }
   }

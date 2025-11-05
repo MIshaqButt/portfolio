@@ -1,5 +1,5 @@
-import 'package:m_ishaq_butt/generated/assets/assets.gen.dart';
-import 'package:m_ishaq_butt/modules/certificates/model/certificate_model.dart';
+import 'package:mishaqbutt/generated/assets/assets.gen.dart';
+import 'package:mishaqbutt/modules/certificates/model/certificate_model.dart';
 
 class CertificateData {
   static List<CertificateModel> certificateList = [
@@ -22,6 +22,7 @@ class CertificateData {
         "Theory of Programming Languages",
       ],
       link: "",
+      type: 'Educational Certificate',
     ),
     CertificateModel(
       name: "BS Computer Science",
@@ -41,6 +42,7 @@ class CertificateData {
         "Web Technologies (HTML, CSS, JavaScript)",
       ],
       link: "",
+      type: 'Educational Certificate',
     ),
     CertificateModel(
       name: "BS Computer Science",
@@ -51,6 +53,7 @@ class CertificateData {
       description:
           "I was awarded a Merit Certificate from Minhaj University Lahore in recognition of my academic excellence, achieving a CGPA of 3.54 out of 4.00 in my BS in Computer Science. This achievement reflects my dedication, hard work, and commitment to excelling in my studies. Throughout my degree, I maintained a strong academic record while actively engaging in coursework related to algorithms, data structures, database management, and software engineering principles. This recognition further motivated me to continue striving for excellence in the field of computer science and software development.",
       link: "",
+      type: 'Educational Certificate',
     ),
     CertificateModel(
       name: "Experience Letter",
@@ -70,6 +73,7 @@ class CertificateData {
         "Collaborated with designers and backend developers to deliver scalable and maintainable solutions",
       ],
       link: "",
+      type: 'Work Experience Certificate',
     ),
     CertificateModel(
       name: "Experience Letter",
@@ -88,6 +92,7 @@ class CertificateData {
         "Collaborated with cross-functional teams to deliver high-quality, client-driven solutions",
       ],
       link: "",
+      type: 'Work Experience Certificate',
     ),
     CertificateModel(
       name: "Experience Letter",
@@ -107,6 +112,7 @@ class CertificateData {
         "Worked closely with designers, backend teams, and stakeholders to deliver high-quality applications",
       ],
       link: "",
+      type: 'Work Experience Certificate',
     ),
     CertificateModel(
       name: "Short Computer Course",
@@ -117,6 +123,7 @@ class CertificateData {
       description:
           "I completed a short computer course from Xtreme Institute of Computer Science, where I gained hands-on experience with essential software tools and applications. This course covered a variety of programs, including Winword, Excel, PowerPoint, and Access, equipping me with foundational skills in office productivity tools. Additionally, I explored web development through FrontPage and multimedia design with Flash MX, as well as Urdu typing using InPage. These experiences provided me with a strong understanding of computer literacy, preparing me for more advanced studies in computer science and technology.",
       link: "",
+      type: 'Cources Certificate',
     ),
     CertificateModel(
       name: "Web Design & Development",
@@ -127,6 +134,7 @@ class CertificateData {
       description:
           "I completed a comprehensive 6-month course in Web Development and Design from House of Professionals, where I gained hands-on experience in creating dynamic and responsive websites. This course provided me with a deep understanding of front-end and back-end web development, covering technologies like HTML, CSS, JavaScript, and PHP. I also learned about responsive web design, ensuring that websites were optimized for various devices and screen sizes. Additionally, I explored UI/UX design principles and gained insights into database management using MySQL. This course laid a solid foundation for my career in software development, equipping me with the skills to create user-friendly and functional websites.",
       link: "",
+      type: 'Cources Certificate',
     ),
     CertificateModel(
       name: "Call Center Agent",
@@ -137,17 +145,19 @@ class CertificateData {
       description:
           "I received a certificate as a Call Center Agent from the Punjab Board of Technical Education Lahore, where I learned essential communication and customer service skills. This program equipped me with the expertise to handle customer inquiries, resolve issues, and provide exceptional support in various industries. I gained proficiency in using call center software, handling customer interactions, and ensuring customer satisfaction, which enhanced my overall communication and problem-solving abilities.",
       link: "",
+      type: 'Cources Certificate',
     ),
-    // CertificateModel(
-    //   name: "Android Java + Database",
-    //   institute: "Institute of Charted Management Professionals USA",
-    //   image: Assets.images.certificates.cor4.path,
-    //   dateFrom: DateTime(2024, 01),
-    //   dateTo: DateTime(2024, 06),
-    //   description:
-    //       "I successfully completed an Android Java + Database course from the Institute of Chartered Management Professionals, USA, earning an international certification. This course provided in-depth knowledge of Android app development using Java, covering topics such as UI/UX design, API integration, database management, and performance optimization. I also gained hands-on experience in working with MySQL, SQLite, and Firebase for efficient data storage and retrieval. This certification strengthened my expertise in building scalable and high-performance Android applications, further enhancing my skills in mobile development and database management.",
-    //   link: "",
-    // ),
+    CertificateModel(
+      name: "Android Java + Database",
+      institute: "Institute of Charted Management Professionals USA",
+      image: Assets.images.certificates.cor4.path,
+      dateFrom: DateTime(2024, 01),
+      dateTo: DateTime(2024, 06),
+      description:
+          "I successfully completed an Android Java + Database course from the Institute of Chartered Management Professionals, USA, earning an international certification. This course provided in-depth knowledge of Android app development using Java, covering topics such as UI/UX design, API integration, database management, and performance optimization. I also gained hands-on experience in working with MySQL, SQLite, and Firebase for efficient data storage and retrieval. This certification strengthened my expertise in building scalable and high-performance Android applications, further enhancing my skills in mobile development and database management.",
+      link: "",
+      type: 'Cources Certificate',
+    ),
     CertificateModel(
       name: "Religious Pluralism & World Peace",
       institute: "Minhaj University Lahore",
@@ -156,6 +166,7 @@ class CertificateData {
       dateTo: DateTime(2017, 11),
       description: "",
       link: "",
+      type: 'Awards & Competition Certificate',
     ),
     CertificateModel(
       name: "Speech Competition",
@@ -165,6 +176,7 @@ class CertificateData {
       dateTo: DateTime(2017, 11),
       description: "",
       link: "",
+      type: 'Awards & Competition Certificate',
     ),
     CertificateModel(
       name: "Islamic Economics & Finance Conference",
@@ -174,6 +186,7 @@ class CertificateData {
       dateTo: DateTime(2018, 01),
       description: "",
       link: "",
+      type: 'Awards & Competition Certificate',
     ),
     CertificateModel(
       name: "Social Responsibility & World Religious",
@@ -183,6 +196,7 @@ class CertificateData {
       dateTo: DateTime(2018, 10),
       description: "",
       link: "",
+      type: 'Awards & Competition Certificate',
     ),
     CertificateModel(
       name: "World Islamic Economics & Finance Conference",
@@ -192,80 +206,88 @@ class CertificateData {
       dateTo: DateTime(2019, 01),
       description: "",
       link: "",
+      type: 'Awards & Competition Certificate',
     ),
-    
-    // CertificateModel(
-    //   name: "Organizer in Founder's Day",
-    //   institute: "Minhaj University Lahore",
-    //   image: Assets.images.certificates.con9.path,
-    //   dateFrom: DateTime(2019, 02),
-    //   dateTo: DateTime(2019, 02),
-    //   description: "",
-    //   link: "",
-    // ),
-    // CertificateModel(
-    //   name: "SAP S4HANA Career Roadshow",
-    //   institute: "Digital Transformation Solution",
-    //   image: Assets.images.certificates.con6.path,
-    //   dateFrom: DateTime(2019, 07),
-    //   dateTo: DateTime(2019, 07),
-    //   description: "",
-    //   link: "",
-    // ),
-    // CertificateModel(
-    //   name: "ALIF '19 Quiz Competition",
-    //   institute: "Ameer-ud-Din Medical College Lahore",
-    //   image: Assets.images.certificates.con7.path,
-    //   dateFrom: DateTime(2019, 10),
-    //   dateTo: DateTime(2019, 10),
-    //   description: "",
-    //   link: "",
-    // ),
-    // CertificateModel(
-    //   name: "Tech Talk",
-    //   institute: "Kot Enterprises Private Limited",
-    //   image: Assets.images.certificates.con8.path,
-    //   dateFrom: DateTime(2019, 11),
-    //   dateTo: DateTime(2019, 11),
-    //   description: "",
-    //   link: "",
-    // ),
-    // CertificateModel(
-    //   name: "National Workshop on Big Data",
-    //   institute: "Punjab University Lahore",
-    //   image: Assets.images.certificates.con10.path,
-    //   dateFrom: DateTime(2019, 11),
-    //   dateTo: DateTime(2019, 11),
-    //   description: "",
-    //   link: "",
-    // ),
-    // CertificateModel(
-    //   name: "IEEE IAS National Workshop on Robotics & Industrial Automation",
-    //   institute: "Minhaj University Lahore",
-    //   image: Assets.images.certificates.con11.path,
-    //   dateFrom: DateTime(2020, 02),
-    //   dateTo: DateTime(2020, 02),
-    //   description: "",
-    //   link: "",
-    // ),
-    // CertificateModel(
-    //   name: "IEEE IAS National Workshop on Robotics & Industrial Automation",
-    //   institute: "Minhaj University Lahore",
-    //   image: Assets.images.certificates.con12.path,
-    //   dateFrom: DateTime(2020, 02),
-    //   dateTo: DateTime(2020, 02),
-    //   description: "",
-    //   link: "",
-    // ),
-    // CertificateModel(
-    //   name: "IEEE IAS National Workshop on Robotics & Industrial Automation",
-    //   institute: "Minhaj University Lahore",
-    //   image: Assets.images.certificates.con13.path,
-    //   dateFrom: DateTime(2020, 02),
-    //   dateTo: DateTime(2020, 02),
-    //   description: "",
-    //   link: "",
-    // ),
+    CertificateModel(
+      name: "Organizer in Founder's Day",
+      institute: "Minhaj University Lahore",
+      image: Assets.images.certificates.con9.path,
+      dateFrom: DateTime(2019, 02),
+      dateTo: DateTime(2019, 02),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
+    CertificateModel(
+      name: "SAP S4HANA Career Roadshow",
+      institute: "Digital Transformation Solution",
+      image: Assets.images.certificates.con6.path,
+      dateFrom: DateTime(2019, 07),
+      dateTo: DateTime(2019, 07),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
+    CertificateModel(
+      name: "ALIF '19 Quiz Competition",
+      institute: "Ameer-ud-Din Medical College Lahore",
+      image: Assets.images.certificates.con7.path,
+      dateFrom: DateTime(2019, 10),
+      dateTo: DateTime(2019, 10),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
+    CertificateModel(
+      name: "Tech Talk",
+      institute: "Kot Enterprises Private Limited",
+      image: Assets.images.certificates.con8.path,
+      dateFrom: DateTime(2019, 11),
+      dateTo: DateTime(2019, 11),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
+    CertificateModel(
+      name: "National Workshop on Big Data",
+      institute: "Punjab University Lahore",
+      image: Assets.images.certificates.con10.path,
+      dateFrom: DateTime(2019, 11),
+      dateTo: DateTime(2019, 11),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
+    CertificateModel(
+      name: "IEEE IAS National Workshop on Robotics & Industrial Automation",
+      institute: "Minhaj University Lahore",
+      image: Assets.images.certificates.con11.path,
+      dateFrom: DateTime(2020, 02),
+      dateTo: DateTime(2020, 02),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
+    CertificateModel(
+      name: "IEEE IAS National Workshop on Robotics & Industrial Automation",
+      institute: "Minhaj University Lahore",
+      image: Assets.images.certificates.con12.path,
+      dateFrom: DateTime(2020, 02),
+      dateTo: DateTime(2020, 02),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
+    CertificateModel(
+      name: "IEEE IAS National Workshop on Robotics & Industrial Automation",
+      institute: "Minhaj University Lahore",
+      image: Assets.images.certificates.con13.path,
+      dateFrom: DateTime(2020, 02),
+      dateTo: DateTime(2020, 02),
+      description: "",
+      link: "",
+      type: 'Awards & Competition Certificate',
+    ),
   
   ];
 }

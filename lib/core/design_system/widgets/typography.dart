@@ -2,7 +2,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:m_ishaq_butt/generated/assets/fonts.gen.dart';
+import 'package:mishaqbutt/generated/assets/fonts.gen.dart';
 
 abstract class MIBTypography {
   static const s6w400 = TextStyle(

@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:m_ishaq_butt/infrastructure/api/email_repository.dart';
+import 'package:mishaqbutt/infrastructure/api/email_repository.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 

@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:m_ishaq_butt/core/constants/messages.dart';
+import 'package:mishaqbutt/core/constants/messages.dart';
 
 class ApiException extends Equatable implements Exception {
   const ApiException(this.message, {this.code = 500, this.error}) : super();

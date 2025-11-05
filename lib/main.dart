@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:m_ishaq_butt/app.dart';
-import 'package:m_ishaq_butt/core/dependency_injection/injection_container.dart';
-import 'package:m_ishaq_butt/core/utils/configure_web.dart';
+import 'package:mishaqbutt/app.dart';
+import 'package:mishaqbutt/core/dependency_injection/injection_container.dart';
+import 'package:mishaqbutt/core/utils/configure_web.dart';
 
 void main() async {
   runZonedGuarded(
@@ -23,7 +23,14 @@ void main() async {
       runApp(const MyApp());
     },
     (e, s) {
-      // TODO Add logging/crashlytics support here
+      FlutterError.reportError(
+        FlutterErrorDetails(
+          exception: e,
+          stack: s,
+          library: 'main',
+          context: ErrorDescription('Uncaught zone error'),
+        ),
+      );
     },
   );
 }

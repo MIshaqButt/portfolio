@@ -1,12 +1,12 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:m_ishaq_butt/core/local_storage/secured_prefs.dart';
-import 'package:m_ishaq_butt/core/networking/interceptors/connectivity_interceptor.dart';
-import 'package:m_ishaq_butt/core/networking/interceptors/logging_interceptor.dart';
-import 'package:m_ishaq_butt/core/networking/interceptors/token_interceptor.dart';
-import 'package:m_ishaq_butt/infrastructure/api/email_api.dart';
-import 'package:m_ishaq_butt/infrastructure/api/email_repository.dart';
-import 'package:m_ishaq_butt/infrastructure/bloc/email_bloc.dart';
+import 'package:mishaqbutt/core/local_storage/secured_prefs.dart';
+import 'package:mishaqbutt/core/networking/interceptors/connectivity_interceptor.dart';
+import 'package:mishaqbutt/core/networking/interceptors/logging_interceptor.dart';
+import 'package:mishaqbutt/core/networking/interceptors/token_interceptor.dart';
+import 'package:mishaqbutt/infrastructure/api/email_api.dart';
+import 'package:mishaqbutt/infrastructure/api/email_repository.dart';
+import 'package:mishaqbutt/infrastructure/bloc/email_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 

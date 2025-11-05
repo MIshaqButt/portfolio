@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
 
 class Gradients {
   static const Gradient primaryGradient = RadialGradient(

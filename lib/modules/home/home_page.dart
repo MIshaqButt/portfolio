@@ -1,28 +1,29 @@
-import 'package:m_ishaq_butt/core/design_system/values/animations.dart';
-import 'package:m_ishaq_butt/core/design_system/values/data.dart';
-import 'package:m_ishaq_butt/core/design_system/values/sizes.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/core/utils/functions.dart';
-import 'package:m_ishaq_butt/generated/assets/assets.gen.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/modules/home/widgets/home_page_header.dart';
-import 'package:m_ishaq_butt/modules/home/widgets/loading_page.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/animated_footer.dart';
-import 'package:m_ishaq_butt/modules/works/works_page.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_positioned_text.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_slide_transtion.dart';
-import 'package:m_ishaq_butt/presentation/widgets/animated_text_slide_box_transition.dart';
-import 'package:m_ishaq_butt/presentation/widgets/custom_spacer.dart';
-import 'package:m_ishaq_butt/presentation/widgets/page_wrapper.dart';
-import 'package:m_ishaq_butt/presentation/widgets/project_item.dart';
-import 'package:m_ishaq_butt/presentation/widgets/spaces.dart';
+import 'package:mishaqbutt/core/design_system/values/animations.dart';
+import 'package:mishaqbutt/core/design_system/values/data.dart';
+import 'package:mishaqbutt/core/design_system/values/sizes.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/core/utils/functions.dart';
+import 'package:mishaqbutt/generated/assets/assets.gen.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/home/widgets/home_page_header.dart';
+import 'package:mishaqbutt/modules/home/widgets/loading_page.dart';
+import 'package:mishaqbutt/modules/project_detail/model/project_detail_model.dart';
+import 'package:mishaqbutt/modules/widgets/animated_footer.dart';
+import 'package:mishaqbutt/modules/works/works_page.dart';
+import 'package:mishaqbutt/modules/widgets/animated_positioned_text.dart';
+import 'package:mishaqbutt/modules/widgets/animated_slide_transtion.dart';
+import 'package:mishaqbutt/modules/widgets/animated_text_slide_box_transition.dart';
+import 'package:mishaqbutt/modules/widgets/custom_spacer.dart';
+import 'package:mishaqbutt/modules/widgets/page_wrapper.dart';
+import 'package:mishaqbutt/modules/widgets/project_item.dart';
+import 'package:mishaqbutt/modules/widgets/spaces.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 class HomePage extends StatefulWidget {
-  static const String homePageRoute = StringConst.HOME_PAGE;
+  static const String homePageRoute = StringConst.homePage;
 
   const HomePage({super.key});
 
@@ -96,7 +97,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
     );
     return PageWrapper(
       selectedRoute: HomePage.homePageRoute,
-      selectedPageName: StringConst.HOME,
+      selectedPageName: StringConst.home,
       navBarAnimationController: _slideTextController,
       hasSideTitle: false,
       hasUnveilPageAnimation: _arguments.showUnVeilPageAnimation,
@@ -104,7 +105,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
         _slideTextController.forward();
       },
       customLoadingAnimation: LoadingHomePageAnimation(
-        text: StringConst.DEV_NAME,
+        text: StringConst.devName,
         style: textTheme.headlineLarge!.copyWith(color: ColorName.white),
         onLoadingDone: () {
           _slideTextController.forward();
@@ -138,7 +139,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                 children: [
                   AnimatedTextSlideBoxTransition(
                     controller: _recentWorksController,
-                    text: StringConst.CRAFTED_WITH_LOVE,
+                    text: StringConst.craftedWithLove,
                     textStyle: textTheme.headlineLarge?.copyWith(
                       color: ColorName.black,
                       fontSize: responsiveSize(context, 30, 48, md: 40, sm: 36),
@@ -151,12 +152,12 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       parent: _recentWorksController,
                       curve: Interval(0.6, 1.0, curve: Curves.fastOutSlowIn),
                     ),
-                    text: StringConst.SELECTION,
+                    text: StringConst.selection,
                     textStyle: textTheme.bodyLarge?.copyWith(
                       fontSize: responsiveSize(
                         context,
-                        Sizes.TEXT_SIZE_16,
-                        Sizes.TEXT_SIZE_18,
+                        Sizes.textSize16,
+                        Sizes.textSize18,
                       ),
                       height: 2,
                       fontWeight: FontWeight.w400,
@@ -200,9 +201,9 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  StringConst.THERES_MORE.toUpperCase(),
+                  StringConst.thereMore.toUpperCase(),
                   style: textTheme.bodyLarge?.copyWith(
-                    fontSize: responsiveSize(context, 11, Sizes.TEXT_SIZE_12),
+                    fontSize: responsiveSize(context, 11, Sizes.textSize12),
                     letterSpacing: 2,
                     fontWeight: FontWeight.w300,
                   ),
@@ -225,7 +226,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            StringConst.VIEW_ALL_PROJECTS.toLowerCase(),
+                            StringConst.viewAll.toLowerCase(),
                             style: textButtonStyle,
                           ),
                           SpaceW12(),
@@ -251,7 +252,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   List<Widget> _buildRecentProjects({
-    required List<ProjectItemData> data,
+    required List<ProjectDetailModel> data,
     required int projectHeight,
     required int subHeight,
   }) {
@@ -287,7 +288,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   List<Widget> _buildProjectsForMobile({
-    required List<ProjectItemData> data,
+    required List<ProjectDetailModel> data,
     required int projectHeight,
     required int subHeight,
   }) {

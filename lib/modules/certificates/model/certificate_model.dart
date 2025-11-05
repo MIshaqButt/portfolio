@@ -7,6 +7,7 @@ class CertificateModel {
   final String description;
   final List<String>? keyPoints;
   final String link;
+  final String type;
 
   CertificateModel({
     required this.name,
@@ -17,6 +18,7 @@ class CertificateModel {
     required this.dateTo,
     required this.image,
     required this.link,
+    required this.type,
   });
 }
 

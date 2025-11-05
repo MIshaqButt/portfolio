@@ -1,11 +1,15 @@
-import 'package:m_ishaq_butt/presentation/pages/project_detail/project_detail_page.dart';
-import 'package:m_ishaq_butt/presentation/widgets/project_item.dart';
+import 'package:mishaqbutt/modules/project_detail/model/project_detail_model.dart';
+import 'package:mishaqbutt/modules/project_detail/project_detail_page.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher.dart' as url_launcher;
 
 class Functions {
   static void launchUrl(String url) async {
-    await launch(url);
+    final uri = Uri.parse(url);
+    await url_launcher.launchUrl(
+      uri,
+      mode: url_launcher.LaunchMode.externalApplication,
+    );
   }
 
   static Size textSize({
@@ -24,11 +28,11 @@ class Functions {
 
   static void navigateToProject({
     required BuildContext context,
-    required List<ProjectItemData> dataSource,
-    required ProjectItemData currentProject,
+    required List<ProjectDetailModel> dataSource,
+    required ProjectDetailModel currentProject,
     required int currentProjectIndex,
   }) {
-    ProjectItemData? nextProject;
+    ProjectDetailModel? nextProject;
     bool hasNextProject;
     if ((currentProjectIndex + 1) > (dataSource.length - 1)) {
       hasNextProject = false;

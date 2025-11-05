@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:m_ishaq_butt/core/design_system/values/sizes.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/core/design_system/values/sizes.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
 
 class MIBTheme {
   static const _lightFillColor = ColorName.primaryColor;
@@ -55,80 +55,80 @@ class MIBTheme {
 
   static final TextTheme _textTheme = TextTheme(
     displayLarge: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
-      fontSize: Sizes.TEXT_SIZE_96,
+      fontFamily: StringConst.visueltPro,
+      fontSize: Sizes.textSize96,
       color: ColorName.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
     displayMedium: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
-      fontSize: Sizes.TEXT_SIZE_60,
+      fontFamily: StringConst.visueltPro,
+      fontSize: Sizes.textSize60,
       color: ColorName.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
     displaySmall: TextStyle(
-      fontSize: Sizes.TEXT_SIZE_48,
+      fontSize: Sizes.textSize48,
       color: ColorName.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
     headlineLarge: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
-      fontSize: Sizes.TEXT_SIZE_34,
+      fontFamily: StringConst.visueltPro,
+      fontSize: Sizes.textSize34,
       color: ColorName.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
     headlineMedium: TextStyle(
-      fontSize: Sizes.TEXT_SIZE_24,
+      fontSize: Sizes.textSize24,
       color: ColorName.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
     headlineSmall: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
-      fontSize: Sizes.TEXT_SIZE_20,
+      fontFamily: StringConst.visueltPro,
+      fontSize: Sizes.textSize20,
       color: ColorName.black,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
     titleLarge: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
-      fontSize: Sizes.TEXT_SIZE_16,
+      fontFamily: StringConst.visueltPro,
+      fontSize: Sizes.textSize16,
       color: ColorName.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
     titleMedium: TextStyle(
-      fontSize: Sizes.TEXT_SIZE_14,
+      fontSize: Sizes.textSize14,
       color: ColorName.secondaryColor,
       fontWeight: _semiBold,
       fontStyle: FontStyle.normal,
     ),
     bodyLarge: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
-      fontSize: Sizes.TEXT_SIZE_16,
+      fontFamily: StringConst.visueltPro,
+      fontSize: Sizes.textSize16,
       color: ColorName.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
     bodyMedium: TextStyle(
-      fontSize: Sizes.TEXT_SIZE_14,
+      fontSize: Sizes.textSize14,
       color: ColorName.secondaryColor,
       fontWeight: _light,
       fontStyle: FontStyle.normal,
     ),
     labelLarge: TextStyle(
-      fontSize: Sizes.TEXT_SIZE_14,
+      fontSize: Sizes.textSize14,
       color: ColorName.secondaryColor,
       fontStyle: FontStyle.normal,
       fontWeight: _medium,
     ),
     bodySmall: TextStyle(
-      fontFamily: StringConst.VISUELT_PRO,
-      fontSize: Sizes.TEXT_SIZE_12,
+      fontFamily: StringConst.visueltPro,
+      fontSize: Sizes.textSize12,
       color: ColorName.white,
       fontWeight: _regular,
       fontStyle: FontStyle.normal,

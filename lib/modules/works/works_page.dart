@@ -1,19 +1,20 @@
-import 'package:m_ishaq_butt/core/design_system/values/data.dart';
-import 'package:m_ishaq_butt/core/design_system/values/strings.dart';
-import 'package:m_ishaq_butt/core/layout/adaptive.dart';
-import 'package:m_ishaq_butt/core/utils/functions.dart';
-import 'package:m_ishaq_butt/generated/assets/colors.gen.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/animated_footer.dart';
-import 'package:m_ishaq_butt/modules/works/widgets/noteworthy_projects.dart';
-import 'package:m_ishaq_butt/presentation/pages/widgets/page_header.dart';
-import 'package:m_ishaq_butt/presentation/widgets/custom_spacer.dart';
-import 'package:m_ishaq_butt/presentation/widgets/page_wrapper.dart';
-import 'package:m_ishaq_butt/presentation/widgets/project_item.dart';
+import 'package:mishaqbutt/core/design_system/values/data.dart';
+import 'package:mishaqbutt/core/design_system/values/strings.dart';
+import 'package:mishaqbutt/core/layout/adaptive.dart';
+import 'package:mishaqbutt/core/utils/functions.dart';
+import 'package:mishaqbutt/generated/assets/colors.gen.dart';
+import 'package:mishaqbutt/modules/project_detail/model/project_detail_model.dart';
+import 'package:mishaqbutt/modules/widgets/animated_footer.dart';
+import 'package:mishaqbutt/modules/works/widgets/noteworthy_projects.dart';
+import 'package:mishaqbutt/modules/widgets/page_header.dart';
+import 'package:mishaqbutt/modules/widgets/custom_spacer.dart';
+import 'package:mishaqbutt/modules/widgets/page_wrapper.dart';
+import 'package:mishaqbutt/modules/widgets/project_item.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class WorksPage extends StatefulWidget {
-  static const String worksPageRoute = StringConst.WORKS_PAGE;
+  static const String worksPageRoute = StringConst.worksPage;
   const WorksPage({super.key});
 
   @override
@@ -65,7 +66,7 @@ class WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
     );
     return PageWrapper(
       selectedRoute: WorksPage.worksPageRoute,
-      selectedPageName: StringConst.WORKS,
+      selectedPageName: StringConst.works,
       navBarAnimationController: _headingTextController,
       hasSideTitle: false,
       onLoadingAnimationDone: () {
@@ -78,7 +79,7 @@ class WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
         ),
         children: [
           PageHeader(
-            headingText: StringConst.WORKS,
+            headingText: StringConst.works,
             headingTextController: _headingTextController,
           ),
           ResponsiveBuilder(
@@ -120,7 +121,7 @@ class WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
   }
 
   List<Widget> _buildProjects({
-    required List<ProjectItemData> data,
+    required List<ProjectDetailModel> data,
     required int projectHeight,
     required int subHeight,
   }) {
@@ -158,7 +159,7 @@ class WorksPageState extends State<WorksPage> with TickerProviderStateMixin {
   }
 
   List<Widget> _buildProjectsForMobile({
-    required List<ProjectItemData> data,
+    required List<ProjectDetailModel> data,
     required int projectHeight,
     required int subHeight,
   }) {

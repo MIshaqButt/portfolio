@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:m_ishaq_butt/core/networking/method_type.dart';
-import 'package:m_ishaq_butt/core/utils/typedefs.dart';
+import 'package:mishaqbutt/core/networking/method_type.dart';
+import 'package:mishaqbutt/core/utils/typedefs.dart';
 
 class RequestConfig {
   const RequestConfig({
